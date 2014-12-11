@@ -150,7 +150,7 @@ static const int GRID_COLUMNS = 10;
         }
     }
 }
-
+    
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
 {
     BOOL isIndexValid = YES;
