@@ -142,15 +142,16 @@ static const int GRID_COLUMNS = 10;
         {
             Creature *currentCreature = _gridArray[i][j];
             if (currentCreature.livingNeighbors ==3) {
-                currentCreature.isAlive = YES;
+                currentCreature.isAlive = true;
             }else{
-                currentCreature.isAlive = NO;
+                if (currentCreature.livingNeighbors <=1 ||currentCreature.livingNeighbors >=4 )
+                currentCreature.isAlive = false;
             }
 
         }
     }
 }
-    
+
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
 {
     BOOL isIndexValid = YES;
